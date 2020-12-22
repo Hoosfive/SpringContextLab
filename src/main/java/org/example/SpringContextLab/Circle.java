@@ -38,7 +38,7 @@ public class Circle implements ObjectInterface {
     }
 
     public void draw() {
-        System.out.println(String.format("x = %d, y = %d, radius = %d", x,y, radius));
+        System.out.println(String.format("x = %d, y = %d, radius = %d", getX(),getY(), getRadius()));
     }
 
 }

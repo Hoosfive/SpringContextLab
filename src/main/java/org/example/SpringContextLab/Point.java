@@ -29,7 +29,7 @@ public class Point implements ObjectInterface {
     }
 
     public void draw() {
-        System.out.println(String.format("x = %d, y = %d", x,y));
+        System.out.println(String.format("x = %d, y = %d",getX(),getY()));
     }
 
 }
