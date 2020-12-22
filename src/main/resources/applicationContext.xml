@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--<bean id="pointBean" class="org.example.SpringContextLab.Point">
+        <constructor-arg value="23"/>
+        <constructor-arg value="32"/>
+    </bean>-->
+
+    <bean id="objectBean" class="org.example.SpringContextLab.Circle">
+        <constructor-arg value="43"/>
+        <constructor-arg value="34"/>
+        <constructor-arg value="45"/>
+    </bean>
+
+
+
+    <bean id="shapeBean" class="org.example.SpringContextLab.Shape"/>
+
+
+</beans>
