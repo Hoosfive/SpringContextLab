@@ -1,6 +1,6 @@
 package org.example.SpringContextLab;
 
-public class Point implements ObjectInterface {
+public class Point implements Shape {
 
     private int x;
     private int y;

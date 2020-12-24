@@ -1,6 +1,6 @@
 package org.example.SpringContextLab;
 
-public class Circle implements ObjectInterface {
+public class Circle implements Shape {
     private int x;
     private int y;
     private int radius;

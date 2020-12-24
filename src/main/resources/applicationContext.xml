@@ -1,22 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-    <!--<bean id="objectBean" class="org.example.SpringContextLab.Point">
-        <constructor-arg value="23"/>
-        <constructor-arg value="32"/>
-    </bean>-->
-
-    <bean id="objectBean" class="org.example.SpringContextLab.Circle">
-        <constructor-arg value="43"/>
-        <constructor-arg value="34"/>
-        <constructor-arg value="45"/>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+        xmlns:p="http://www.springframework.org/schema/p"
+        xmlns:aop = "http://www.springframework.org/schema/aop"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xmlns:util="http://www.springframework.org/schema/util"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd
+        http://www.springframework.org/schema/aop
+   		http://www.springframework.org/schema/aop/spring-aop.xsd
+        ">
+    <bean id="sceneBean" class="org.example.SpringContextLab.Scene" p:color="Cyan" autowire="byType">
+        <property name="objects">
+            <util:list id="objects">
+                <bean class="org.example.SpringContextLab.Point" p:x="23" p:y="32"/>
+                <bean class="org.example.SpringContextLab.Circle" p:x="322" p:y="36" p:radius="58"/>
+                <bean class="org.example.SpringContextLab.Circle" p:x="33" p:y="762" p:radius="85"/>
+                <bean class="org.example.SpringContextLab.Point" p:x="63" p:y="39"/>
+                <bean class="org.example.SpringContextLab.Point" p:x="14" p:y="34"/>
+            </util:list>
+        </property>
     </bean>
-
-
-
-    <bean id="shapeBean" class="org.example.SpringContextLab.Shape"/>
-
 
 </beans>
